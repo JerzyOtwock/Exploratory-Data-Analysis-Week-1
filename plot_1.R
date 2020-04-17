@@ -3,7 +3,7 @@ library(lubridate)
 library(Hmisc)
 dt <- fread("H:\\LITERATURA_i_POBRANE\\R_kurs\\Cursera R\\Exploratory-Data-Analysis-Week-1\\household_power_consumption.txt")
 dt$Date <- dmy( dt$Date )
-dt <- dt[Date >= "2007-07-01" & Date <= "2007-07-02", ]
+dt <- dt[Date >= "2007-02-01" & Date <= "2007-02-02", ]
 dt$data <- paste0(dt$Date , " " ,dt$Time)
 dt$data <-  ymd_hms(dt$data)
 
